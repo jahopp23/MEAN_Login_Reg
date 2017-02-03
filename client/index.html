@@ -1,0 +1,46 @@
+ <!DOCTYPE html> 
+ <html lang="en" ng-App="myApp">
+ <head>
+ <title>Login and Registration</title>
+ <script src="angular/angular.js"></script>
+ <script src="static/js/angularMain.js"></script>
+ <script src="static/js/angularController.js"></script>
+ <script src="static/js/angularFactories.js"></script>
+
+ </head>
+ <body ng-controller="usersController as UC">
+
+ <header>Hello There</header>
+ 
+ <fieldset>
+    <legend>Login</legend>
+    <form ng-submit="UC.login() ">
+      <label>Username
+           <input type="text" ng-model="UC.logUser.username" />
+       </label>
+       <label>Password
+         <input type="password" ng-model="UC.logUser.password">
+         </label>
+         <input type="submit" value="Login">
+       </form>
+ </fieldset>
+ <fieldset>
+    <legend>Register</legend>
+      <form ng-submit="UC.register() ">
+          <label>First Name
+                <input type="text" ng-model="UC.regUser.first_name" />
+            </label>
+            <label>Last Name 
+                  <input type="text" ng-model="UC.regUser.last_name" />
+              </label>
+              <label>Username
+                    <input type="text" ng-model="UC.regUser.username" />
+               </label>
+                <label>Password
+         <input type="password" ng-model="UC.regUser.password" />
+             <input type="submit" value="Register">
+         </label>
+
+ </fieldset>
+ </body>
+ </html>
